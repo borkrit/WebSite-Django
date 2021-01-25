@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+</head>
+
+<body >
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    }
+    header{
+        width: 100%;
+        height: 100vh;
+        background-color: chartreuse;
+        
+    }
+    .block-info{
+        display: flex;
+        justify-content: space-around;
+        /* background-color: red; */
+        width: 60%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .block-info div{
+        width: 33%;
+    }
+    .works{
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer{
+        width: 100%;
+        height: 5vh;
+        background-color: chartreuse;
+    }
+    img{
+        width: 40%;
+        height: 40%;
+        margin-top: 3%;
+        border-radius: 30px;
+    }
+    </style>
+    <header >
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+        <nav class="meny">
+            <li>start</li>
+            <li>about us</li>
+            <li>contact </li>
+        </nav>
+        <h1 class='name-company'> center</h1>
+    </header>
+    <section class="block-info">
+        <div>
+            <h2>text</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eos illo perferendis? At et quas fuga minus. Nemo ullam natus harum reiciendis quos iure ipsum, magnam error repellendus asperiores eaque!
+            Modi et illum sequi commodi, aut magnam libero cupiditate expedita voluptatum labore atque sapiente nostrum impedit dicta, nisi, nemo aperiam laborum vitae eos! Quam laboriosam delectus provident earum eveniet accusantium.
+            Sunt alias libero neque aspernatur voluptatum odit magni! Amet voluptatem quis corporis culpa ipsum eligendi labore dolorem repudiandae iure repellendus esse expedita, minima magnam tempora neque reiciendis nemo eos. Nemo.
+            Voluptas eos, voluptates exercitationem laudantium reiciendis alias ab dignissimos quod aperiam! Repudiandae, obcaecati ex. Expedita, maxime possimus quasi nihil enim quae atque vitae esse dolor laudantium dolore obcaecati ipsam consequatur?
+           </p>
+        </div>
+        <img src="{% static 'img/test.jpg' %}" alt="aa"  >
+    </section>
+    <section class="block-info" >
+        <img src="{% static 'img/test.jpg' %}" alt="aa">
+        <div>
+            
+            <h2>text</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eos illo perferendis? At et quas fuga minus. Nemo ullam natus harum reiciendis quos iure ipsum, magnam error repellendus asperiores eaque!
+            Modi et illum sequi commodi, aut magnam libero cupiditate expedita voluptatum labore atque sapiente nostrum impedit dicta, nisi, nemo aperiam laborum vitae eos! Quam laboriosam delectus provident earum eveniet accusantium.
+            Sunt alias libero neque aspernatur voluptatum odit magni! Amet voluptatem quis corporis culpa ipsum eligendi labore dolorem repudiandae iure repellendus esse expedita, minima magnam tempora neque reiciendis nemo eos. Nemo.
+            Voluptas eos, voluptates exercitationem laudantium reiciendis alias ab dignissimos quod aperiam! Repudiandae, obcaecati ex. Expedita, maxime possimus quasi nihil enim quae atque vitae esse dolor laudantium dolore obcaecati ipsam consequatur?
+           </p>
+        </div>
+        
+    </section>
+    <section class="block-info">
+        <div>
+            <h2>text</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eos illo perferendis? At et quas fuga minus. Nemo ullam natus harum reiciendis quos iure ipsum, magnam error repellendus asperiores eaque!
+            Modi et illum sequi commodi, aut magnam libero cupiditate expedita voluptatum labore atque sapiente nostrum impedit dicta, nisi, nemo aperiam laborum vitae eos! Quam laboriosam delectus provident earum eveniet accusantium.
+            Sunt alias libero neque aspernatur voluptatum odit magni! Amet voluptatem quis corporis culpa ipsum eligendi labore dolorem repudiandae iure repellendus esse expedita, minima magnam tempora neque reiciendis nemo eos. Nemo.
+            Voluptas eos, voluptates exercitationem laudantium reiciendis alias ab dignissimos quod aperiam! Repudiandae, obcaecati ex. Expedita, maxime possimus quasi nihil enim quae atque vitae esse dolor laudantium dolore obcaecati ipsam consequatur?
+           </p>
+        </div>
+        <img src="{% static 'img/test.jpg' %}" alt="aa">
+    </section>
+    <section class="block-info" >
+        <img src="{% static 'img/test.jpg' %}" alt="aa">
+        <div>
+            
+            <h2>text</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eos illo perferendis? At et quas fuga minus. Nemo ullam natus harum reiciendis quos iure ipsum, magnam error repellendus asperiores eaque!
+            Modi et illum sequi commodi, aut magnam libero cupiditate expedita voluptatum labore atque sapiente nostrum impedit dicta, nisi, nemo aperiam laborum vitae eos! Quam laboriosam delectus provident earum eveniet accusantium.
+            Sunt alias libero neque aspernatur voluptatum odit magni! Amet voluptatem quis corporis culpa ipsum eligendi labore dolorem repudiandae iure repellendus esse expedita, minima magnam tempora neque reiciendis nemo eos. Nemo.
+            Voluptas eos, voluptates exercitationem laudantium reiciendis alias ab dignissimos quod aperiam! Repudiandae, obcaecati ex. Expedita, maxime possimus quasi nihil enim quae atque vitae esse dolor laudantium dolore obcaecati ipsam consequatur?
+           </p>
+        </div>
+        
+    </section>
+    <section class="uslugi">
+        <h2 id="a">zakres</h2>
+        <div class="usluga">
+            <img src="" alt="">
+            <p></p>
+        </div>
+
+    </section>
+    <div id="works"  class="works">
+
+        {% for work in worker_list %}
+        <div style="width: 30%; background-color:brown; margin: 5px;" >
+            <h1>{{work.name}}</h1>
+            
+            <p>{{work.salary}}</p>
+            <p>details</p>
+            <div>
+                {{work.description}}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+        <!-- <select name="" id="">
+            <option disabled>Выберите героя</option>
+            {% for work in worker_list %}
+            <option value='{{work.name}}' >{{work.country}} - {{work.name}}</option>
+            
+            {% endfor %}
+            
+        </select> -->
+    
+        <form action="" method="post">
+            <p>23</p>
+        </form>
+
+<footer>
+    <p>2</p>
+</footer>
+<script>
+    const l = document.getElementById('works');
+    const a = document.getElementById('a');
+    a.addEventListener('click',()=>{
+        l.style.display='flex'
+    }
+    )
+    
+
+</script>
+</body>
+</html>

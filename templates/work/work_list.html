@@ -5,51 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="{% static 'style/main.css'  %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
 </head>
 
 <body >
-    <style>
-        body{
-    margin: 0;
-    padding: 0;
-    }
-    header{
-        width: 100%;
-        height: 100vh;
-        background-color: chartreuse;
-        
-    }
-    .block-info{
-        display: flex;
-        justify-content: space-around;
-        /* background-color: red; */
-        width: 60%;
-        margin: auto;
-        margin-top: 10px;
-    }
-    .block-info div{
-        width: 33%;
-    }
-    .works{
-        display: none;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    footer{
-        width: 100%;
-        height: 5vh;
-        background-color: chartreuse;
-    }
-    img{
-        width: 40%;
-        height: 40%;
-        margin-top: 3%;
-        border-radius: 30px;
-    }
-    </style>
-    <header >
+    
+    <header>
         <div class="logo">
             <img src="" alt="">
         </div>
@@ -59,6 +22,19 @@
             <li>contact </li>
         </nav>
         <h1 class='name-company'> center</h1>
+        
+        <!-- <button class="button slider-prev">Prev</button>
+        <div class="slider">
+            <div class="slider-line">
+                <img src="{% static 'img/test.jpg' %}" alt="aa"  >
+                <img src="{% static 'img/test.jpg' %}" alt="aa"  >
+                <img src="{% static 'img/test1.jpg' %}" alt="aa"  >
+                <img src="{% static 'img/test.jpg' %}" alt="aa"  >
+                <img src="{% static 'img/test.jpg' %}" alt="aa"  >
+            </div>
+        </div>
+        
+        <button class="button slider-next">Next</button> -->
     </header>
     <section class="block-info">
         <div>
@@ -108,11 +84,32 @@
         </div>
         
     </section>
+    <h2 style="text-align: center;">zakres</h2>
     <section class="uslugi">
-        <h2 id="a">zakres</h2>
+        
         <div class="usluga">
-            <img src="" alt="">
-            <p></p>
+            <img src="{% static 'img/test.jpg' %}" alt="1">
+            <p>1</p>
+        </div>
+        <div class="usluga">
+            <img src="{% static 'img/test.jpg' %}" alt="2">
+            <p>2</p>
+        </div>
+        <div class="usluga">
+            <img src="{% static 'img/test.jpg' %}" alt="2">
+            <p>2</p>
+        </div>
+        <div class="usluga">
+            <img src="{% static 'img/test.jpg' %}" alt="2">
+            <p>2</p>
+        </div>
+        <div class="usluga">
+            <img src="{% static 'img/test.jpg' %}" alt="3">
+            <p>3</p>
+        </div>
+        <div class="usluga">
+            <img src="{% static 'img/test.jpg' %}" alt="4">
+            <p>4</p>
         </div>
 
     </section>
@@ -146,7 +143,50 @@
 <footer>
     <p>2</p>
 </footer>
-<script>
+<!-- slider -->
+    <script>
+        const images = document.querySelectorAll('.slider .slider-line img');
+    const sliderLine = document.querySelector('.slider .slider-line');
+    let count = 0;
+    let width;
+
+function init() {
+    console.log('resize');
+    width = document.querySelector('.slider').offsetWidth;
+    sliderLine.style.width = width * images.length + 'px';
+    images.forEach(item => {
+        item.style.width = width + 'px';
+        item.style.height = 'auto';
+    });
+    rollSlider();
+}
+
+init();
+window.addEventListener('resize', init);
+
+document.querySelector('.slider-next').addEventListener('click', function () {
+    count++;
+    if (count >= images.length) {
+        count = 0;
+    }
+    rollSlider();
+});
+
+document.querySelector('.slider-prev').addEventListener('click', function () {
+    count--;
+    if (count < 0) {
+        count = images.length - 1;
+    }
+    rollSlider();
+});
+
+function rollSlider() {
+    sliderLine.style.transform = 'translate(-' + count * width + 'px)';
+
+}
+    </script>
+<!-- end slider -->
+ <script>
     const l = document.getElementById('works');
     const a = document.getElementById('a');
     a.addEventListener('click',()=>{
@@ -154,7 +194,6 @@
     }
     )
     
-
-</script>
+</script> 
 </body>
 </html>
